@@ -1,0 +1,170 @@
+@import 'navbar';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+// Hero Section CSS
+.hero {
+  background-color: $light;
+
+  .hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    .hero_container--left {
+      width: 100%;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+
+    .hero_container--left h1 {
+      font-size: 4rem;
+      color: $lime;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    .hero_container--left h2 {
+      font-size: 4rem;
+      color: $dark;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    .hero_container--left p {
+      font-size: 2rem;
+      color: $dark;
+      margin-top: 1rem;
+      font-weight: 700;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    .hero__container--btn {
+      font-size: 1rem;
+      background-color: $lime;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      color: $light;
+      margin-top: 2rem;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+      outline: none;
+    }
+
+    .hero__container--btn a {
+      position: relative;
+      z-index: 2;
+      color: $light;
+      text-decoration: none;
+    }
+
+    .hero__container--btn:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: $orangeRed;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+
+    .hero__container--btn:hover:after {
+      width: 100%;
+    }
+
+    .hero__container--right {
+      text-align: center;
+    }
+
+    .hero__container--img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// FOOTER STYLE
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 50px 0;
+
+  .footer-col {
+    h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 5px;
+      font-weight: 500;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        width: 50px;
+      }
+    }
+
+    ul {
+      li {
+        a {
+          font-size: 16px;
+          text-transform: capitalize;
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 300;
+          color: #bbbbbb;
+          display: block;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #ffffff;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
